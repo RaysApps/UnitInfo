@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ],
+  "@id": "dtmi:com:raysapps:angle;1",
+  "@type": "Interface",
+  "displayName": "Angle",
+  "description": "Demo Angle Sensor",
+  "contents": [
+    {
+      "@type": ["Property", "Angle"],
+      "name": "angle",
+      "schema": "double",
+      "unit": "degreeOfArc",
+      "displayName": "Angle Sensor",
+      "description": "Measure Angle"
+      
+    },
+    {
+      "@type":["Property","TimeSpan"],
+      "name":"Interval",	
+      "schema":"integer",
+      "unit":"second",
+      "displayName":"Interval",
+      "description":"Interval for sending telemetry",
+      "writable": true
+    },
+    {
+      "@type": ["Telemetry", "Angle"],
+      "name": "AngleInstance",
+      "schema": "double",
+      "unit": "degreeOfArc",
+      "displayName": "Angle Sensor",
+      "description": "Measure Angle"
+    },
+      
+    {
+      "@type": "Command",
+      "name": "getAngle",
+      "request": {
+        "name": "delay",
+        "schema": "double"
+      }
+    }
+  ]
+}

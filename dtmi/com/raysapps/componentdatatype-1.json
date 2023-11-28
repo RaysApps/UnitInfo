@@ -1,0 +1,21 @@
+{
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ],
+  "@id": "dtmi:com:raysapps:componentdatatype;1",
+  "@type": "Interface",
+  "displayName": "componentdatatype",
+  "contents": [
+      {
+      "@type": "Property",
+      "name": "deviceStatus",
+      "schema": "string"
+    },
+    {
+      "@type": "Component",
+      "name": "DataComponent",
+      "schema": "dtmi:com:raysapps:datatypes;1"
+    }
+  ]
+}

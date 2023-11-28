@@ -1,0 +1,46 @@
+{
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ],
+  "@id": "dtmi:com:raysapps:frequency;1",
+  "@type": "Interface",
+  "displayName": "Frequency",
+  "description": "Demo Frequency Sensor",
+  "contents": [
+    {
+      "@type": ["Property", "Frequency"],
+      "name": "Frequency",
+      "schema": "double",
+      "unit": "hertz",
+      "displayName": "Frequency Sensor",
+      "description": "Measure Acceleration"
+    },
+    {
+      "@type":["Property","TimeSpan"],
+      "name":"Interval",	
+      "schema":"integer",
+      "unit":"second",
+      "displayName":"Interval",
+      "description":"Interval for sending telemetry",
+      "writable": true
+    },
+    {
+      "@type": ["Telemetry", "Frequency"],
+      "name": "FrequencyInstance",
+      "schema": "double",
+      "unit": "hertz",
+      "displayName": "Frequency Sensor",
+      "description": "Measure Frequency"
+    },
+      
+    {
+      "@type": "Command",
+      "name": "getFrequency",
+      "request": {
+        "name": "delay",
+        "schema": "double"
+      }
+    }
+  ]
+}

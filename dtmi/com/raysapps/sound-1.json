@@ -1,0 +1,48 @@
+{
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ],
+  "@id": "dtmi:com:raysapps:sound;1",
+  "@type": "Interface",
+  "displayName": "SoundPressure",
+  "description": "Demo SoundPressure Sensor",
+  "contents": [
+    {
+      "@type": ["Property", "SoundPressure"],
+      "name": "SoundPressure",
+      "schema": "double",
+      "unit": "decibel",
+      "displayName": "SoundPressure Sensor",
+      "description": "Measure SoundPressure"
+    },
+    {
+      "@type":["Property","TimeSpan"],
+      "name":"Interval",	
+      "schema":"integer",
+      "unit":"second",
+      "displayName":"Interval",
+      "description":"Interval for sending telemetry",
+      "writable":true
+      
+    },
+    {
+      "@type": ["Telemetry", "SoundPressure"],
+      "name": "SoundPressureInstance",
+      "schema": "double",
+      "unit": "decibel",
+      "displayName": "SoundPressure Sensor",
+      "description": "Measure SoundPressure"
+    },
+      
+    {
+      "@type": "Command",
+      "name": "getSoundPressure",
+      "request": {
+        "name": "delay",
+        "schema": "double"
+      }
+    }
+  ]
+}
+

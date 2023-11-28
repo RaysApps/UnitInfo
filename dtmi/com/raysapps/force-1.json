@@ -1,0 +1,46 @@
+{
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ],
+  "@id": "dtmi:com:raysapps:force;1",
+  "@type": "Interface",
+  "displayName": "Force",
+  "description": "Demo Force Sensor",
+  "contents": [
+    {
+      "@type": ["Property", "Force"],
+      "name": "Force",
+      "schema": "double",
+      "unit": "newton",
+      "displayName": "Force Sensor",
+      "description": "Measure Force"
+    },
+    {
+      "@type":["Property","TimeSpan"],
+      "name":"Interval",	
+      "schema":"integer",
+      "unit":"second",
+      "displayName":"Interval",
+      "description":"Interval for sending telemetry",
+      "writable": true
+    },
+    {
+      "@type": ["Telemetry", "Force"],
+      "name": "ForceInstance",
+      "schema": "double",
+      "unit": "newton",
+      "displayName": "Force Sensor",
+      "description": "Measure Force"
+    },
+      
+    {
+      "@type": "Command",
+      "name": "getForce",
+      "request": {
+        "name": "delay",
+        "schema": "double"
+      }
+    }
+  ]
+}

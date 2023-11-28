@@ -1,0 +1,46 @@
+{
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ],
+  "@id": "dtmi:com:raysapps:current;1",
+  "@type": "Interface",
+  "displayName": "Current",
+  "description": "Demo Current Sensor",
+  "contents": [
+    {
+      "@type": ["Property", "Current"],
+      "name": "energy",
+      "schema": "double",
+      "unit": "ampere",
+      "displayName": "Current Sensor",
+      "description": "Measure Current"
+    },
+    {
+      "@type":["Property","TimeSpan"],
+      "name":"Interval",	
+      "schema":"integer",
+      "unit":"second",
+      "displayName":"Interval",
+      "description":"Interval for sending telemetry",
+      "writable": true
+    },
+    {
+      "@type": ["Telemetry", "Current"],
+      "name": "CurrentInstance",
+      "schema": "double",
+      "unit": "ampere",
+      "displayName": "Current Sensor",
+      "description": "Measure Current"
+    },
+      
+    {
+      "@type": "Command",
+      "name": "getCurrent",
+      "request": {
+        "name": "delay",
+        "schema": "double"
+      }
+    }
+  ]
+}

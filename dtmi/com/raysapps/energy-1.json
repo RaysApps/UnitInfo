@@ -1,0 +1,43 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:com:raysapps:energy;1",
+  "@type": "Interface",
+  "displayName": "Energy",
+  "description": "Demo Energy Sensor",
+  "contents": [
+    {
+      "@type": ["Property", "Energy"],
+      "name": "energy",
+      "schema": "double",
+      "unit": "kilowattHour",
+      "displayName": "Energy Sensor",
+      "description": "Measure Energy Consumption"
+    },
+    {
+      "@type":["Property","TimeSpan"],
+      "name":"Interval",	
+      "schema":"integer",
+      "unit":"second",
+      "displayName":"Interval",
+      "description":"Interval for sending telemetry",
+      "writable": true
+    },
+    {
+      "@type": ["Telemetry", "Energy"],
+      "name": "EnergyInstance",
+      "schema": "double",
+      "unit": "kilowattHour",
+      "displayName": "Energy Sensor",
+      "description": "Measure Energy Consumption"
+    },
+      
+    {
+      "@type": "Command",
+      "name": "getEnergy",
+      "request": {
+        "name": "delay",
+        "schema": "double"
+      }
+    }
+  ]
+}

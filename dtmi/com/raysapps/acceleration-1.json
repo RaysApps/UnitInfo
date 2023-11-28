@@ -1,0 +1,46 @@
+{
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ],
+  "@id": "dtmi:com:raysapps:acceleration;1",
+  "@type": "Interface",
+  "displayName": "Acceleration",
+  "description": "Demo Acceleration Sensor",
+  "contents": [
+    {
+      "@type": ["Property", "Acceleration"],
+      "name": "acceleration",
+      "schema": "double",
+      "unit": "metrePerSecondSquared",
+      "displayName": "Accelartion Sensor",
+      "description": "Measure Acceleration"
+    },
+    {
+      "@type":["Property","TimeSpan"],
+      "name":"Interval",	
+      "schema":"integer",
+      "unit":"second",
+      "displayName":"Interval",
+      "description":"Interval for sending telemetry",
+       "writable": true
+    },
+    {
+      "@type": ["Telemetry", "Acceleration"],
+      "name": "AccelarationInstance",
+      "schema": "double",
+      "unit": "metrePerSecondSquared",
+      "displayName": "Accelartion Sensor",
+      "description": "Measure Accelartion"
+    },
+      
+    {
+      "@type": "Command",
+      "name": "getAcceleration",
+      "request": {
+        "name": "delay",
+        "schema": "double"
+      }
+    }
+  ]
+}

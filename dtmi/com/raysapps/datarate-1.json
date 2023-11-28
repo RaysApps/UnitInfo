@@ -1,0 +1,43 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:com:raysapps:datarate;1",
+  "@type": "Interface",
+  "displayName": "DataRate",
+  "description": "Demo DataRate Sensor",
+  "contents": [
+    {
+      "@type": ["Property", "DataRate"],
+      "name": "datarateInstance",
+      "schema": "double",
+      "unit": "mebibytePerSecond",
+      "displayName": "DataRate Sensor",
+      "description": "Measure Date Rate"
+      },
+    {
+      "@type":["Property","TimeSpan"],
+      "name":"Interval",	
+      "schema":"integer",
+      "unit":"second",
+      "displayName":"Interval",
+      "description":"Interval for sending telemetry",
+      "writable": true
+    },
+    {
+      "@type": ["Telemetry", "DataRate"],
+      "name": "DataInstance",
+      "schema": "double",
+      "unit": "mebibitPerSecond",
+      "displayName": "DataRate Sensor",
+      "description": "Measure Data Rate"
+    },
+      
+    {
+      "@type": "Command",
+      "name": "getCurrent",
+      "request": {
+        "name": "delay",
+        "schema": "double"
+      }
+    }
+  ]
+}

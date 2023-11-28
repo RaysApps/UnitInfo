@@ -1,0 +1,57 @@
+{
+  "links": {
+    "self": "index.json"
+  },
+  "models": {
+    "dtmi:com:raysapps:acceleration;1": {
+      "displayName": "Acceleration",
+      "description": "Demo Acceleration Sensor"
+    },
+    "dtmi:com:raysapps:angle;1": {
+      "displayName": "Angle",
+      "description": "Demo Angle Sensor"
+    },
+    "dtmi:com:raysapps:area;1": {
+      "displayName": "Area",
+      "description": "Demo Area Sensor"
+    },
+    "dtmi:com:raysapps:componentdatatype;1": {
+      "displayName": "componentdatatype"
+    },
+    "dtmi:com:raysapps:current;1": {
+      "displayName": "Current",
+      "description": "Demo Current Sensor"
+    },
+    "dtmi:com:raysapps:datarate;1": {
+      "displayName": "DataRate",
+      "description": "Demo DataRate Sensor"
+    },
+    "dtmi:com:raysapps:datatypes;1": {
+      "displayName": "dataTypes"
+    },
+    "dtmi:com:raysapps:distance;1": {
+      "displayName": "Distance",
+      "description": "Demo Distance Sensor"
+    },
+    "dtmi:com:raysapps:energy;1": {
+      "displayName": "Energy",
+      "description": "Demo Energy Sensor"
+    },
+    "dtmi:com:raysapps:force;1": {
+      "displayName": "Force",
+      "description": "Demo Force Sensor"
+    },
+    "dtmi:com:raysapps:frequency;1": {
+      "displayName": "Frequency",
+      "description": "Demo Frequency Sensor"
+    },
+    "dtmi:com:raysapps:sensorcollection;1": {
+      "displayName": "SensorCollection"
+    },
+    "dtmi:com:raysapps:sound;1": {
+      "displayName": "SoundPressure",
+      "description": "Demo SoundPressure Sensor"
+    }
+  },
+  "version": "1.0"
+}

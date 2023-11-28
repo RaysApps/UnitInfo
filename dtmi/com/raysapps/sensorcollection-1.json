@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ],
+  "@id": "dtmi:com:raysapps:sensorcollection;1",
+  "@type": "Interface",
+  "displayName": "SensorCollection",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "Counter",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "Sensor",
+      "schema": "string"
+    },
+    {
+      "@type": "Command",
+      "name": "DeviceStatus",
+      "request": {
+        "name": "DeviceStatus",
+        "schema": "string"
+      }
+    },
+    {
+      "@type": "Component",
+      "name": "Force",
+      "schema": "dtmi:com:raysapps:force;1"
+    },
+    {
+      "@type": "Component",
+      "name": "Energy",
+      "schema": "dtmi:com:raysapps:energy;1"
+    },
+    {
+      "@type": "Component",
+      "name": "Distance",
+      "schema": "dtmi:com:raysapps:distance;1"
+    }
+  ]
+}
+
+
+

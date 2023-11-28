@@ -1,0 +1,46 @@
+{
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ],
+  "@id": "dtmi:com:raysapps:area;1",
+  "@type": "Interface",
+  "displayName": "Area",
+  "description": "Demo Area Sensor",
+  "contents": [
+    {
+      "@type": ["Property", "Area"],
+      "name": "area",
+      "schema": "double",
+      "unit": "squareMetre",
+      "displayName": "Area Sensor",
+      "description": "Measure Area"
+    },
+    {
+      "@type":["Property","TimeSpan"],
+      "name":"Interval",	
+      "schema":"integer",
+      "unit":"second",
+      "displayName":"Interval",
+      "description":"Interval for sending telemetry",
+      "writable": true
+    },
+    {
+      "@type": ["Telemetry", "Area"],
+      "name": "AreaInstance",
+      "schema": "double",
+      "unit": "squareMetre",
+      "displayName": "Area Sensor",
+      "description": "Measure Area"
+    },
+      
+    {
+      "@type": "Command",
+      "name": "getArea",
+      "request": {
+        "name": "delay",
+        "schema": "double"
+      }
+    }
+  ]
+}

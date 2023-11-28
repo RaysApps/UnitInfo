@@ -1,0 +1,80 @@
+{
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ],
+  "@id": "dtmi:com:raysapps:datatypes;1",
+  "@type": "Interface",
+  "displayName": "dataTypes",
+  "schemas": [
+    {
+      "@id": "dtmi:com:raysapps:demoobject;1",
+      "@type": "Object",
+      "fields": [
+        {
+          "name": "x",
+          "schema": "integer"
+        },
+        {
+          "name": "y",
+          "schema": "boolean"
+        },
+        {
+          "name": "z",
+          "schema": "string"
+        }
+      ]
+    }
+   
+  ],
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "ObjectProperty",
+      "schema": "dtmi:com:raysapps:demoobject;1"
+    },
+     {
+      "@type": "Property",
+      "name": "BooleanProperty",
+      "schema": "boolean"
+    },
+    {
+      "@type": "Property",
+      "name": "WriteBooleanProperty",
+      "schema": "boolean",
+      "writable": true
+      
+    },
+    {
+      "@type": "Telemetry",
+      "name": "TelemetryProperty",
+      "schema": "boolean"
+    },
+    {
+      "@type": "Command",
+      "name": "BooleanCommand",
+      "request": {
+        "name": "value",
+        "schema": "boolean"
+      },
+      "response": {
+        "name": "value",
+        "schema": "boolean"
+      }
+
+    },
+    {
+      "@type": "Command",
+      "name": "SquareRoot",
+      "request": {
+        "name": "value",
+        "schema": "integer"
+      },
+      "response": {
+        "name": "value",
+        "schema": "double"
+      }
+
+    }
+  ]
+}

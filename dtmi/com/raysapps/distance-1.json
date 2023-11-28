@@ -1,0 +1,46 @@
+{
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ],
+  "@id": "dtmi:com:raysapps:distance;1",
+  "@type": "Interface",
+  "displayName": "Distance",
+   "description": "Demo Distance Sensor",
+  "contents": [
+    {
+      "@type": ["Property", "Distance"],
+      "name": "distance",
+      "schema": "double",
+      "unit": "millimetre",
+      "displayName": "Distance Sensor",
+      "description": "Measure Distance Value"
+    },
+    {
+      "@type":["Property","TimeSpan"],
+      "name":"Interval",	
+      "schema":"integer",
+      "unit":"second",
+      "displayName":"Interval",
+      "description":"Interval for sending telemetry",
+      "writable": true
+    },
+    {
+      "@type": ["Telemetry", "Distance"],
+      "name": "DistanceInstance",
+      "schema": "double",
+      "unit": "millimetre",
+      "displayName": "Distance Sensor",
+      "description": "Measure Distance Travelled"
+    },
+      
+    {
+      "@type": "Command",
+      "name": "getDistance",
+      "request": {
+        "name": "delay",
+        "schema": "double"
+      }
+    }
+  ]
+}
